@@ -2,4 +2,3 @@
 /vendor/
 *.log
 .DS_Store
-/theme/assets/dist/
