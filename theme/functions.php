@@ -6,6 +6,7 @@
  */
 
 require_once dirname( __DIR__ ) . '/vendor/autoload.php';
+require_once dirname( __DIR__ ) . '/theme/app/custom-functions.php';
 
 Timber\Timber::init();
 Timber::$dirname    = array( 'views', 'blocks' );
@@ -26,7 +27,11 @@ class Timberland extends Timber\Site {
 
 	public function add_to_context( $context ) {
 		$context['site'] = $this;
-		$context['menu'] = Timber::get_menu();
+		$context['menus'] = Timber::get_menu('header')->items;
+		$context['options'] = get_fields('option');
+		echo '<pre>';
+			// print_r(Timber::get_menu('header')->items);
+		echo '</pre>';
 
 		// Require block functions files
 		foreach ( glob( __DIR__ . '/blocks/*/functions.php' ) as $file ) {
@@ -148,6 +153,10 @@ function acf_block_render_callback( $block, $content ) {
 	$context           = Timber::context();
 	$context['post']   = Timber::get_post();
 	$context['block']  = $block;
+	$context['all_menus'] = Timber::get_menus();
+	$context['menus'] = array(
+		'header' => Timber::get_menu('header')
+	);
 	$context['fields'] = get_fields();
     $block_name        = explode( '/', $block['name'] )[1];
     $template          = 'blocks/'. $block_name . '/index.twig';

@@ -1,15 +1,15 @@
 {
   "theme/assets/main.js": {
-    "file": "assets/main-ClTdZkBR.js",
+    "file": "assets/main-Bc8A3_tI.js",
     "name": "main",
     "src": "theme/assets/main.js",
     "isEntry": true,
     "css": [
-      "assets/main-OjM548WU.css"
+      "assets/main-DrHu4gSd.css"
     ]
   },
   "theme/assets/styles/editor-style.css": {
-    "file": "assets/editor-style-BV5bkZsz.css",
+    "file": "assets/editor-style-CMDvUoI4.css",
     "src": "theme/assets/styles/editor-style.css",
     "isEntry": true
   }

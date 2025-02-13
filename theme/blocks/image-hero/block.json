@@ -1,7 +1,7 @@
 {
   "apiVersion": 2,
-  "name": "acf/example",
-  "title": "Example",
+  "name": "acf/image-hero",
+  "title": "Image Hero",
   "description": "",
   "category": "custom",
   "acf": {

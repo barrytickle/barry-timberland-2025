@@ -1,0 +1,12 @@
+{% set buttonType = buttonType|default('solid') %}
+{% set url = url|default('#') %}
+{% set class = class|default('') %}
+{% set title = title|default('Button') %}
+
+{% if buttonType == 'solid' %}
+	<a href="{{url}}" class="flex items-center justify-center px-8 py-4 text-base font-semibold leading-snug transition ease-in-out bg-white rounded-full h-14 duration-250 text-dark-900 hover:text-white focus:outline-none hover:bg-dark-600 {{class}}">
+		{{title}}
+	</a>
+{% else %}
+	<button type="{{ buttonType }}" class="{{ class }}">{{ title }}</button>
+{% endif %}
