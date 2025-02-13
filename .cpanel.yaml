@@ -1,0 +1,6 @@
+deployment:
+  tasks:
+    - export: GIT_DIR=${PWD}
+    - /usr/bin/git pull origin main
+    - /usr/bin/npm install --omit=dev
+    - /usr/bin/npm run build
