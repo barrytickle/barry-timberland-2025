@@ -27,7 +27,7 @@ class Timberland extends Timber\Site {
 
 	public function add_to_context( $context ) {
 		$context['site'] = $this;
-		$context['menus'] = Timber::get_menu('header')->items;
+		$context['menus'] = Timber::get_menu('header') ? Timber::get_menu('header')->items : [];
 		$context['options'] = get_fields('option');
 		echo '<pre>';
 			// print_r(Timber::get_menu('header')->items);
