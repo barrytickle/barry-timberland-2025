@@ -1,5 +1,6 @@
 /node_modules/
 /vendor/
-theme/assets/dist/
 *.log
 .DS_Store
+/theme/assets/dist/
+.env
